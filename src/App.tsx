@@ -1,121 +1,68 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className="flex min-h-screen flex-col overflow-y-auto">
+      <main className="flex min-h-screen w-full flex-row">
+        <nav className="gap-6 flex-1 flex flex-col bg-blue-800 px-8 py-5">
+          <div className="flex flex-row">
+            <div className="h-20 w-20 bg-white" />
+            <div className="flex-1 bg-gray-200">
+              <h1 className="font-bold text-3xl text-white">Relatório <br /> de dados</h1>
+            </div>
+          </div>
+          <nav className="flex flex-col items-center gap-4">
+            <div className="px-4 py-2 rounded-md flex flex-row w-full hover:bg-blue-700 items-center cursor-pointer gap-3">
+              <div className="h-5 w-5 bg-white" />
+              <h2 className="text-lg text-white">Início</h2>
+            </div>
+            <div className="px-4 py-2 rounded-md flex flex-row w-full hover:bg-blue-700 items-center cursor-pointer gap-3">
+              <div className="h-5 w-5 bg-white" />
+              <h2 className="text-lg text-white">Explorar</h2>
+            </div>
+            <div className="px-4 py-2 rounded-md flex flex-row w-full hover:bg-blue-700 items-center cursor-pointer gap-3">
+              <div className="h-5 w-5 bg-white" />
+              <h2 className="text-lg text-white">Favoritos</h2>
+            </div>
+            <div className="px-4 py-2 rounded-md flex flex-row w-full hover:bg-blue-700 items-center cursor-pointer gap-3">
+              <div className="h-5 w-5 bg-white" />
+              <h2 className="text-lg text-white">Recentes</h2>
+            </div>
+          </nav>
+          <div className="h-[1px] w-full bg-gray-200" />
+          <nav className="flex flex-col items-center gap-4">
+            <div className="px-4 py-2 rounded-md flex flex-row w-full hover:bg-blue-700 items-center cursor-pointer gap-3">
+              <div className="h-5 w-5 bg-white" />
+              <h2 className="text-lg text-white">Início</h2>
+            </div>
+            <div className="px-4 py-2 rounded-md flex flex-row w-full hover:bg-blue-700 items-center cursor-pointer gap-3">
+              <div className="h-5 w-5 bg-white" />
+              <h2 className="text-lg text-white">Explorar</h2>
+            </div>
+            <div className="px-4 py-2 rounded-md flex flex-row w-full hover:bg-blue-700 items-center cursor-pointer gap-3">
+              <div className="h-5 w-5 bg-white" />
+              <h2 className="text-lg text-white">Favoritos</h2>
+            </div>
+            <div className="px-4 py-2 rounded-md flex flex-row w-full hover:bg-blue-700 items-center cursor-pointer gap-3">
+              <div className="h-5 w-5 bg-white" />
+              <h2 className="text-lg text-white">Recentes</h2>
+            </div>
+          </nav>
+          <div className="flex flex-row w-full bg-blue-200 items-center justify-around">
+            <div className="h-5 w-5 bg-white"/>
+            <div className="flex flex-col">
+              <h3>asasas</h3>
+              <h4>ksksksksk</h4>
+            </div>
+            <div className="h-5 w-5 bg-white" />
+          </div>
+        </nav>
 
-      <div className="ticks"></div>
+        <div className="flex-8 bg-gray-100"></div>
+      </main>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      <footer className="min-h-100 bg-red-200"></footer>
+    </div>
   )
 }
 
