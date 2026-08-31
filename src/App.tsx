@@ -1,16 +1,16 @@
 import './App.css'
-import { House, Search, Star, Clock, Folder, Bell, ArrowBigDown, ArrowDown, ArrowDown10, ArrowDownIcon, ArrowDownNarrowWide, ArrowDownToLine, ArrowDownWideNarrow } from 'lucide-react'
+import { House, Search, Star, Clock, Folder, Bell, ArrowBigDown, ArrowDown, ArrowDown10, ArrowDownIcon, ArrowDownNarrowWide, ArrowDownToLine, ArrowDownWideNarrow, DollarSign, BaggageClaim, GitGraph, Database, ArrowRight } from 'lucide-react'
 import tabletImage from './assets/image-removebg-preview.png'
 
 function App() {
   return (
-    <div className="flex min-h-screen flex-col overflow-y-auto">
+    <div className="flex min-h-screen flex-col">
       <div className="flex min-h-screen w-full flex-row">
-        <nav className="gap-6 flex-1 flex flex-col bg-[#010e25] px-8 py-5">
-          <div className="flex flex-row">
-            <div className="h-20 w-20 bg-white" />
-            <div className="flex-1 bg-gray-200">
-              <h1 className="font-bold text-3xl text-white">Relatório <br /> de dados</h1>
+        <nav className="sticky top-0 h-screen gap-6 max-h-screen flex flex-col bg-[#010e25] px-8 py-5">
+          <div className="flex flex-row items-center">
+            <Database color='cyan' size={60} strokeWidth={0.7} />
+            <div className="flex-1">
+              <h1 className="font-bold text-2xl text-white">Galeria de<br/> Relatórios</h1>
             </div>
           </div>
           <nav className="flex flex-col items-center gap-0 text-sm">
@@ -76,11 +76,11 @@ function App() {
             </div>
           </header>
           <main className='flex grow flex-col'>
-            <div className="h-100 pt-12 bg-gray-200 flex flex-row items-center px-4 justify-center gap-3">
+            <div className="h-100 pt-12 bg-gray-200 flex flex-row items-center px-10 justify-center gap-3">
               <div className="flex-1 h-full flex flex-col gap-8 justify-center">
                 <h2 className='font-medium text-xl tracking-wider '>RELATÓRIO ESTRATÉGICO</h2>
-                <div className="flex flex-col w-4/5 gap-4">
-                  <h1 className='font-bold text-5xl'>Dashboard executivo</h1>
+                <div className="flex flex-col w-120 gap-4">
+                  <h1 className='font-bold text-4xl'>Dashboard executivo</h1>
                   <p>sdisdj sdijisdj isdisdsj sdosdsd sdsdsd df f f s d ssdsd qw we wed ef ef   os s sas a sas  sdfjdijfidf kkdos</p>
                 </div>
                 <div className="flex flex-row gap-3 mt-3">
@@ -89,6 +89,53 @@ function App() {
                 </div>
               </div>
               <img className='flex-1 h-full' src={tabletImage} alt="Tablet" />
+            </div>
+            <div className="flex flex-1 px-10 py-4 w-full flex-col gap-4">
+              <div className="flex flex-row justify-between w-full">
+                <h3>Todos os relatórios</h3>
+                <h3>Ver todos</h3>
+              </div>
+              <div className="grid grid-cols-3 gap-4">
+                <div className="h-80 col-span-1 gap-5 p-10 flex flex-col rounded-2xl border-2 border-green-300">
+                  <div className="rounded-full flex items-center justify-center h-12 w-12 bg-green-200">
+                    <DollarSign color='green' size={28} strokeWidth={1.5} />
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <h1 className='text-2xl font-bold'>Resultado financeiro</h1>
+                    <p>dshudsd sdsud sds ds dsdsd sdsd sd sdshuhd</p>
+                  </div>
+                  <div className="flex mt-auto flex-row w-full justify-between">
+                    <span>Acessar</span>
+                    <ArrowRight color='black' size={15} strokeWidth={1.5} />
+                  </div>
+                </div>
+                <div className="h-80 col-span-1 gap-5 p-10 flex flex-col rounded-2xl border-2 border-green-300">
+                  <div className="rounded-full flex items-center justify-center h-12 w-12 bg-green-200">
+                    <DollarSign color='green' size={28} strokeWidth={1.5} />
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <h1 className='text-2xl font-bold'>Resultado financeiro</h1>
+                    <p>dshudsd sdsud sds ds dsdsd sdsd sd sdshuhd</p>
+                  </div>
+                  <div className="flex mt-auto flex-row w-full justify-between">
+                    <span>Acessar</span>
+                    <ArrowRight color='black' size={15} strokeWidth={1.5} />
+                  </div>
+                </div>
+                <div className="h-80 col-span-1 gap-5 p-10 flex flex-col rounded-2xl border-2 border-green-300">
+                  <div className="rounded-full flex items-center justify-center h-12 w-12 bg-green-200">
+                    <DollarSign color='green' size={28} strokeWidth={1.5} />
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <h1 className='text-2xl font-bold'>Resultado financeiro</h1>
+                    <p>dshudsd sdsud sds ds dsdsd sdsd sd sdshuhd</p>
+                  </div>
+                  <div className="flex mt-auto flex-row w-full justify-between">
+                    <span>Acessar</span>
+                    <ArrowRight color='black' size={15} strokeWidth={1.5} />
+                  </div>
+                </div>
+              </div>
             </div>
           </main>
         </div>
