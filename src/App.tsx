@@ -1,6 +1,7 @@
 import './App.css'
 import { House, Search, Star, Clock, Folder, Bell, ArrowBigDown, ArrowDown, ArrowDown10, ArrowDownIcon, ArrowDownNarrowWide, ArrowDownToLine, ArrowDownWideNarrow, DollarSign, BaggageClaim, GitGraph, Database, ArrowRight } from 'lucide-react'
 import tabletImage from './assets/image-removebg-preview.png'
+import logo from './assets/logo.png'
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       <div className="flex min-h-screen w-full flex-row">
         <nav className="sticky top-0 h-screen gap-6 max-h-screen flex flex-col bg-[#010e25] px-8 py-5">
           <div className="flex flex-row items-center">
-            <Database color='cyan' size={60} strokeWidth={0.7} />
+            <img src={logo} className="h-15 w-15" />
             <div className="flex-1">
               <h1 className="font-bold text-2xl text-white">Galeria de<br/> Relatórios</h1>
             </div>
