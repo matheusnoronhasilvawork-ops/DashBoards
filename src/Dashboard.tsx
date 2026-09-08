@@ -106,15 +106,15 @@ export default function Dashboard() {
                                     <User color='gray' size={24} strokeWidth={0.7} />
                                     <div className='flex flex-col'>
                                         <h3 className='font-bold text-md'>Gestor</h3>
-                                        <h4 className='text-gray-500 text-[0.7rem]'>01/08/2026 - 07/08/2026</h4>
+                                        <h4 className='text-gray-500 text-[0.7rem]'>Todos</h4>
                                     </div>
                                     <ArrowDown color='gray' size={18} strokeWidth={0.7} />
                                 </div>
                                 <div className="h-fit bg-white border-2 border-gray-400 items-center gap-4 rounded-lg flex flex-row p-3">
                                     <CircleCheckBig color='gray' size={24} strokeWidth={0.7} />
                                     <div className='flex flex-col'>
-                                        <h3 className='font-bold text-md'>Perído</h3>
-                                        <h4 className='text-gray-500 text-[0.7rem]'>01/08/2026 - 07/08/2026</h4>
+                                        <h3 className='font-bold text-md'>Status da correção</h3>
+                                        <h4 className='text-gray-500 text-[0.7rem]'>Todos</h4>
                                     </div>
                                     <ArrowDown color='gray' size={18} strokeWidth={0.7} />
                                 </div>
