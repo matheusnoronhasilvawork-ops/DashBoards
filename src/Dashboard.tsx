@@ -1,4 +1,4 @@
-import { House, Search, Star, Clock, Folder, Bell, ArrowBigDown, ArrowDown, ArrowDown10, ArrowDownIcon, ArrowDownNarrowWide, ArrowDownToLine, ArrowDownWideNarrow, DollarSign, BaggageClaim, GitGraph, Database, ArrowRight } from 'lucide-react'
+import { House, Search, Star, Clock, Folder, Bell, ArrowBigDown, ArrowDown, ArrowDown10, ArrowDownIcon, ArrowDownNarrowWide, ArrowDownToLine, ArrowDownWideNarrow, DollarSign, BaggageClaim, GitGraph, Database, ArrowRight, Calendar, Building, User, User2, CircleCheck, CircleCheckBig } from 'lucide-react'
 import tabletImage from './assets/image-removebg-preview.png'
 import logo from './assets/logo.png'
 
@@ -76,8 +76,49 @@ export default function Dashboard() {
                         </div>
                     </header>
                     <main className='flex grow flex-col'>
-                        <div className="h-full pt-12 bg-gray-200 flex flex-row items-center px-10 justify-center gap-3">
-
+                        <div className="h-full pt-6 bg-gray-200 flex flex-row">
+                            <div className="flex flex-row w-full justify-evenly">
+                                <div className="h-fit bg-white border-2 border-gray-400 items-center gap-4 rounded-lg flex flex-row p-3">
+                                    <Calendar color='gray' size={24} strokeWidth={0.7} />
+                                    <div className='flex flex-col'>
+                                        <h3 className='font-bold text-md'>Perído</h3>
+                                        <h4 className='text-gray-500 text-[0.7rem]'>01/08/2026 - 07/08/2026</h4>
+                                    </div>
+                                    <ArrowDown color='gray' size={18} strokeWidth={0.7} />
+                                </div>
+                                <div className="h-fit bg-white border-2 border-gray-400 items-center gap-4 rounded-lg flex flex-row p-3">
+                                    <Building color='gray' size={24} strokeWidth={0.7} />
+                                    <div className='flex flex-col'>
+                                        <h3 className='font-bold text-md'>Unidade</h3>
+                                        <h4 className='text-gray-500 text-[0.7rem]'>Todos</h4>
+                                    </div>
+                                    <ArrowDown color='gray' size={18} strokeWidth={0.7} />
+                                </div>
+                                <div className="h-fit bg-white border-2 border-gray-400 items-center gap-4 rounded-lg flex flex-row p-3">
+                                    <User color='gray' size={24} strokeWidth={0.7} />
+                                    <div className='flex flex-col'>
+                                        <h3 className='font-bold text-md'>Colaborador</h3>
+                                        <h4 className='text-gray-500 text-[0.7rem]'>Todos</h4>
+                                    </div>
+                                    <ArrowDown color='gray' size={18} strokeWidth={0.7} />
+                                </div>
+                                <div className="h-fit bg-white border-2 border-gray-400 items-center gap-4 rounded-lg flex flex-row p-3">
+                                    <User color='gray' size={24} strokeWidth={0.7} />
+                                    <div className='flex flex-col'>
+                                        <h3 className='font-bold text-md'>Gestor</h3>
+                                        <h4 className='text-gray-500 text-[0.7rem]'>01/08/2026 - 07/08/2026</h4>
+                                    </div>
+                                    <ArrowDown color='gray' size={18} strokeWidth={0.7} />
+                                </div>
+                                <div className="h-fit bg-white border-2 border-gray-400 items-center gap-4 rounded-lg flex flex-row p-3">
+                                    <CircleCheckBig color='gray' size={24} strokeWidth={0.7} />
+                                    <div className='flex flex-col'>
+                                        <h3 className='font-bold text-md'>Perído</h3>
+                                        <h4 className='text-gray-500 text-[0.7rem]'>01/08/2026 - 07/08/2026</h4>
+                                    </div>
+                                    <ArrowDown color='gray' size={18} strokeWidth={0.7} />
+                                </div>
+                            </div>
                         </div>
                     </main>
                 </div>
