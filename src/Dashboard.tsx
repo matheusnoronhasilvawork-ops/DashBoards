@@ -1,4 +1,4 @@
-import { House, Search, Star, Clock, Folder, Bell, ArrowBigDown, ArrowDown, ArrowDown10, ArrowDownIcon, ArrowDownNarrowWide, ArrowDownToLine, ArrowDownWideNarrow, DollarSign, BaggageClaim, GitGraph, Database, ArrowRight, Calendar, Building, User, User2, CircleCheck, CircleCheckBig } from 'lucide-react'
+import { House, Search, Star, Clock, Folder, Bell, ArrowBigDown, ArrowDown, ArrowDown10, ArrowDownIcon, ArrowDownNarrowWide, ArrowDownToLine, ArrowDownWideNarrow, DollarSign, BaggageClaim, GitGraph, Database, ArrowRight, Calendar, Building, User, User2, CircleCheck, CircleCheckBig, Clipboard, ClipboardList, UserPlus, UserPlus2, FileWarning, Watch, TriangleAlert } from 'lucide-react'
 import tabletImage from './assets/image-removebg-preview.png'
 import logo from './assets/logo.png'
 
@@ -76,9 +76,9 @@ export default function Dashboard() {
                         </div>
                     </header>
                     <main className='flex grow flex-col'>
-                        <div className="h-full pt-6 bg-gray-200 flex flex-row">
-                            <div className="flex flex-row w-full justify-evenly">
-                                <div className="h-fit bg-white border-2 border-gray-400 items-center gap-4 rounded-lg flex flex-row p-3">
+                        <div className="h-full gap-4 pt-6 bg-gray-100 flex flex-col px-8">
+                            <div className="flex flex-row w-full justify-between">
+                                <div className="h-fit bg-white border-2 border-gray-300 items-center gap-4 rounded-lg flex flex-row p-3">
                                     <Calendar color='gray' size={24} strokeWidth={0.7} />
                                     <div className='flex flex-col'>
                                         <h3 className='font-bold text-md'>Perído</h3>
@@ -86,7 +86,7 @@ export default function Dashboard() {
                                     </div>
                                     <ArrowDown color='gray' size={18} strokeWidth={0.7} />
                                 </div>
-                                <div className="h-fit bg-white border-2 border-gray-400 items-center gap-4 rounded-lg flex flex-row p-3">
+                                <div className="h-fit bg-white border-2 border-gray-300 items-center gap-4 rounded-lg flex flex-row p-3">
                                     <Building color='gray' size={24} strokeWidth={0.7} />
                                     <div className='flex flex-col'>
                                         <h3 className='font-bold text-md'>Unidade</h3>
@@ -94,7 +94,7 @@ export default function Dashboard() {
                                     </div>
                                     <ArrowDown color='gray' size={18} strokeWidth={0.7} />
                                 </div>
-                                <div className="h-fit bg-white border-2 border-gray-400 items-center gap-4 rounded-lg flex flex-row p-3">
+                                <div className="h-fit bg-white border-2 border-gray-300 items-center gap-4 rounded-lg flex flex-row p-3">
                                     <User color='gray' size={24} strokeWidth={0.7} />
                                     <div className='flex flex-col'>
                                         <h3 className='font-bold text-md'>Colaborador</h3>
@@ -102,7 +102,7 @@ export default function Dashboard() {
                                     </div>
                                     <ArrowDown color='gray' size={18} strokeWidth={0.7} />
                                 </div>
-                                <div className="h-fit bg-white border-2 border-gray-400 items-center gap-4 rounded-lg flex flex-row p-3">
+                                <div className="h-fit bg-white border-2 border-gray-300 items-center gap-4 rounded-lg flex flex-row p-3">
                                     <User color='gray' size={24} strokeWidth={0.7} />
                                     <div className='flex flex-col'>
                                         <h3 className='font-bold text-md'>Gestor</h3>
@@ -110,13 +110,60 @@ export default function Dashboard() {
                                     </div>
                                     <ArrowDown color='gray' size={18} strokeWidth={0.7} />
                                 </div>
-                                <div className="h-fit bg-white border-2 border-gray-400 items-center gap-4 rounded-lg flex flex-row p-3">
+                                <div className="h-fit bg-white border-2 border-gray-300 items-center gap-4 rounded-lg flex flex-row p-3">
                                     <CircleCheckBig color='gray' size={24} strokeWidth={0.7} />
                                     <div className='flex flex-col'>
                                         <h3 className='font-bold text-md'>Status da correção</h3>
                                         <h4 className='text-gray-500 text-[0.7rem]'>Todos</h4>
                                     </div>
                                     <ArrowDown color='gray' size={18} strokeWidth={0.7} />
+                                </div>
+                            </div>
+                            <div className='flex flex-row w-full justify-between'>
+                                <div className='flex flex-row border-2 gap-3 bg-white items-center pl-3 pr-8 py-4 rounded-lg border-gray-300'>
+                                    <div className='flex mb-7 items-center h-fit p-3 justify-center bg-blue-200 rounded-2xl'>
+                                        <ClipboardList color='blue' size={32} strokeWidth={2} />
+                                    </div>
+                                    <div className='flex flex-col'>
+                                        <h2 className='text-lg font-semibold'>Registros processados</h2>
+                                        <h1 className='text-4xl font-bold text-blue-700'>135</h1>
+                                        <h3 className='text-sm text-gray-600 mt-2'>Total de registros em agosto</h3>
+                                    </div>
+                                </div>
+                                <div className='flex flex-row border-2 gap-3 bg-white items-center pl-3 pr-8 py-4 rounded-lg border-gray-300'>
+                                    <div className='flex mb-7 items-center h-fit p-3 justify-center bg-green-200 rounded-2xl'>
+                                        <CircleCheck color='green' size={32} strokeWidth={2} />
+                                    </div>
+                                    <div className='flex flex-col'>
+                                        <h2 className='text-lg font-semibold'>Corrigidos no prazo</h2>
+                                        <div className='flex flex-row items-center gap-4'>
+                                            <h1 className='text-4xl font-bold text-green-700'>105</h1>
+                                            <div className='flex bg-green-200 px-3 py-0.5 rounded-lg'>
+                                                <span className='text-green-700 text-sm font-bold'>77.8%</span>
+                                            </div>
+                                        </div>
+                                        <h3 className='text-sm text-gray-600 mt-2'>% total de registros</h3>
+                                    </div>
+                                </div>
+                                <div className='flex flex-row border-2 gap-3 bg-white items-center pl-3 pr-8 py-4 rounded-lg border-gray-300'>
+                                    <div className='flex mb-7 items-center h-fit p-3 justify-center bg-yellow-200 rounded-2xl'>
+                                        <UserPlus2 color='#f59e0b' size={32} strokeWidth={2} />
+                                    </div>
+                                    <div className='flex flex-col'>
+                                        <h2 className='text-lg font-semibold'>inclusões feitas</h2>
+                                        <h1 className='text-4xl font-bold text-yellow-500'>117</h1>
+                                        <h3 className='text-sm text-gray-600 mt-2'>Total de Inclusões no período</h3>
+                                    </div>
+                                </div>
+                                <div className='flex flex-row border-2 gap-3 bg-white items-center pl-3 pr-8 py-4 rounded-lg border-gray-300'>
+                                    <div className='flex mb-7 items-center h-fit p-3 justify-center bg-red-200 rounded-2xl'>
+                                        <TriangleAlert color='red' size={32} strokeWidth={2} />
+                                    </div>
+                                    <div className='flex flex-col'>
+                                        <h2 className='text-lg font-semibold'>Erros encontrados</h2>
+                                        <h1 className='text-4xl font-bold text-red-700'>135</h1>
+                                        <h3 className='text-sm text-gray-600 mt-2'>Erros identificados no período</h3>
+                                    </div>
                                 </div>
                             </div>
                         </div>
