@@ -1,8 +1,24 @@
 import { House, Search, Star, Clock, Folder, Bell, ArrowBigDown, ArrowDown, ArrowDown10, ArrowDownIcon, ArrowDownNarrowWide, ArrowDownToLine, ArrowDownWideNarrow, DollarSign, BaggageClaim, GitGraph, Database, ArrowRight, Calendar, Building, User, User2, CircleCheck, CircleCheckBig, Clipboard, ClipboardList, UserPlus, UserPlus2, FileWarning, Watch, TriangleAlert } from 'lucide-react'
+import { useEffect, useState } from 'react'
 import tabletImage from './assets/image-removebg-preview.png'
 import logo from './assets/logo.png'
 
+
 export default function Dashboard() {
+
+    const [data, setData] = useState([])
+
+    useEffect(() => {
+        async function fetchData() {
+            const response = await fetch("https://localhost:3000/api/relatorio");
+        
+            const dados = await response.json();
+
+            setData(dados);
+        }
+        fetchData();
+
+    }, []);
     return (
         <div className="flex min-h-screen flex-col">
             <div className="flex min-h-screen w-full flex-row">
@@ -165,6 +181,10 @@ export default function Dashboard() {
                                         <h3 className='text-sm text-gray-600 mt-2'>Erros identificados no período</h3>
                                     </div>
                                 </div>
+                            </div>
+                            <div className="flex flex-row h-50">
+                                <div className="bg-white h-full flex flex-2"></div>
+                                <div className="bg-white h-full flex flex-1"></div>
                             </div>
                         </div>
                     </main>
