@@ -10,15 +10,17 @@ export default function Dashboard() {
 
     useEffect(() => {
         async function fetchData() {
-            const response = await fetch("https://localhost:3000/api/relatorio");
+            const response = await fetch("http://localhost:3000/api/excel_data");
         
             const dados = await response.json();
 
+            console.log(dados);
             setData(dados);
         }
         fetchData();
-
     }, []);
+
+
     return (
         <div className="flex min-h-screen flex-col">
             <div className="flex min-h-screen w-full flex-row">

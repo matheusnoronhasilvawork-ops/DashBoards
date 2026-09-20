@@ -12,18 +12,31 @@ export default async function buscarRelatorio(
       "D:/Matheus2/OneDrive - DIAGNOSTICOS DA AMERICA S.A/Minha planilha de conferência de SPN.xlsx"
     );
 
-    const worksheet = workbook.getWorksheet(1);
+    const meses = [
+      "Fevereiro",
+      "Março",
+      "Abril",
+      "Maio",
+      "Junho",
+      "Julho",
+      "Agosto",
+      "Setembro"
+    ];
 
-    if (!worksheet) {
-      return res.status(404).json({
-        erro: "Planilha não encontrada"
+    const dados: Record<string, unknown[][]> = {};
+
+    workbook.eachSheet((worksheet) => {
+      if (!meses.includes(worksheet.name)) {
+        return;
+      }
+
+      const linhas: unknown[][] = [];
+
+      worksheet.eachRow((row) => {
+        linhas.push(row.values as unknown[]);
       });
-    }
 
-    const dados: unknown[][] = [];
-
-    worksheet.eachRow((row) => {
-      dados.push(row.values as unknown[]);
+      dados[worksheet.name] = linhas;
     });
 
     return res.json(dados);
