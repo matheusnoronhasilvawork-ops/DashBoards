@@ -1,6 +1,13 @@
 import ExcelJS from "exceljs";
 import type { Request, Response } from "express";
 
+type Linha = unknown[];
+
+type Planilha = Linha[]
+
+interface DadosExcel {
+    [nomeDaAba: string]: Planilha;
+}
 export default async function buscarRelatorio(
   req: Request,
   res: Response
@@ -23,14 +30,14 @@ export default async function buscarRelatorio(
       "Setembro"
     ];
 
-    const dados: Record<string, unknown[][]> = {};
+    const dados: DadosExcel = {};
 
     workbook.eachSheet((worksheet) => {
       if (!meses.includes(worksheet.name)) {
         return;
       }
 
-      const linhas: unknown[][] = [];
+      const linhas: Planilha = [];
 
       worksheet.eachRow((row) => {
         linhas.push(row.values as unknown[]);
