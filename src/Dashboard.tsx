@@ -2,6 +2,7 @@ import { House, Search, Star, Clock, Folder, Bell, ArrowBigDown, ArrowDown, Arro
 import { useEffect, useState } from 'react'
 import tabletImage from './assets/image-removebg-preview.png'
 import logo from './assets/logo.png'
+import GraficoRegistros from './graphicComponents/testGraphic'
 
 
 export default function Dashboard() {
@@ -11,7 +12,7 @@ export default function Dashboard() {
     useEffect(() => {
         async function fetchData() {
             const response = await fetch("http://localhost:3000/api/excel_data");
-        
+
             const dados = await response.json();
 
             console.log(dados);
@@ -184,9 +185,21 @@ export default function Dashboard() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex flex-row h-50">
-                                <div className="bg-white h-full flex flex-2"></div>
-                                <div className="bg-white h-full flex flex-1"></div>
+                            <div className="grid grid-cols-7 h-70">
+                                <div className="bg-white h-full col-span-4">
+                                    <GraficoRegistros />
+                                </div>
+                                <div className="bg-white h-full col-span-3">
+                                    <GraficoRegistros />
+                                </div>
+                            </div>
+                            <div className="grid grid-cols-7 h-50">
+                                <div className="bg-white h-full col-span-4">
+                                    <GraficoRegistros />
+                                </div>
+                                <div className="bg-white h-full col-span-3">
+                                    <GraficoRegistros />
+                                </div>
                             </div>
                         </div>
                     </main>
